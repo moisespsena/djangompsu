@@ -1,0 +1,32 @@
+{% overextends "admin/change_form.html" %}
+{% load admin_static bootstrap_admin_template_tags %}{% load firstof from future %}{% display_sidebar_menu cl.has_filters as is_displaying_menu %}
+{% block field_sets %}
+    {% include "admin/include/fieldsets.html" %}
+{% endblock %}
+
+{% block extrastyle %}
+    {{ block.super }}
+   <link rel="stylesheet" href="{% static "admin/css/fieldset-tree-collapse.css" %}"/>
+{% endblock %}
+
+
+{% block extrahead %}
+    {{ block.super }}
+    <script type="application/javascript">
+        window.jQuery = window.$ = django.jQuery;
+    </script>
+    {% include 'autocomplete_light/static.html' %}
+{% endblock %}
+
+{% block object-tools-items %}
+    {{ block.super }}
+    {% if include_clone_link %}
+        <li class="btn-group">
+            <a href="clone/" class="btn btn-default"
+               title="{{ clone_verbose_name }}">
+                <span class="glyphicon glyphicon-duplicate"></span>
+                <span class="text">{{ clone_verbose_name }}</span>
+            </a>
+        </li>
+    {% endif %}
+{% endblock %}

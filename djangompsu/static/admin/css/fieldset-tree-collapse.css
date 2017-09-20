@@ -1,0 +1,75 @@
+fieldset h2,
+fieldset h3,
+fieldset h4,
+.inline-group h2,
+.inline-group h3,
+.inline-group h4{
+    margin-top: 0 !important;
+}
+fieldset.collapse.collapsed_ .fieldset-content,
+.inline-group.collapse.collapsed_ .inline-group-content {
+    display: none;
+}
+
+.form-fields fieldset .fieldset-title,
+.inline-group .inline-group-title {
+    background: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+    border-top: 2px solid #ddd;
+    margin: 10px 0 10px;
+    padding: 5px 15px;
+    font-size: 18px;
+}
+
+.form-fields fieldset .fieldset-content {
+    padding-top: 10px;
+}
+
+.form-fields .panel-body > fieldset > .fieldset-title,
+.form-fields .panel-body > .inline-group .inline-group-title {
+    margin: 0 -15px 10px;
+}
+
+.form-fields fieldset .fieldset-content,
+.inline-group .inline-group-content{
+}
+
+
+.form-fields fieldset fieldset .fieldset-title {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+
+.inline-group fieldset .fieldset-title{
+    font-size: 100%;
+}
+
+.inline-group fieldset.collapsed_ .fieldset-title {
+    border: 0;
+}
+
+.inline-group .inline-group-title {
+    border-top: 0 !important;
+    margin-left:-15px !important;
+    margin-top: 0 !important;
+}
+
+.inline-group.collapsed_ {
+    padding: 0;
+}
+
+.inline-group.collapsed_ .inline-group-title {
+    border: 0 !important;
+    margin: 0 !important;
+}
+
+.inline-group .tabular .inline-group-title {
+    margin-left:0 !important;
+}
+
+.fieldset-titled {
+}
+
+.fieldset-titled > .fieldset-content {
+    padding-left: 15px;
+}
